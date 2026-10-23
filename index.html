@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="description" content="SB game - a 2D sword and magic adventure platformer you can play in your browser.">
+  <title>SB game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>SB game</h1>
+    <p>Slash through monsters, cast fireballs and reach the portal</p>
+  </header>
+
+  <main class="game-wrap">
+    <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+    <div class="hud">
+      <div class="bars">
+        <div class="bar hp"><div id="hpFill" class="fill"></div></div>
+        <div class="bar mana"><div id="manaFill" class="fill"></div></div>
+        <div class="bar xp"><div id="xpFill" class="fill"></div></div>
+      </div>
+      <div class="stats">
+        <span id="levelText">Lv 1</span>
+        <span id="coinText" class="coin">0</span>
+      </div>
+    </div>
+
+    <div id="startScreen" class="overlay">
+      <div class="panel">
+        <h2>SB game</h2>
+        <p>Fight your way across the realm, level up and step through the portal at the end.</p>
+        <ul class="controls-list">
+          <li><kbd>A</kbd><kbd>D</kbd> Move</li>
+          <li><kbd>W</kbd> / <kbd>Space</kbd> Jump</li>
+          <li><kbd>J</kbd> Sword</li>
+          <li><kbd>K</kbd> Fireball</li>
+        </ul>
+        <button id="startBtn" class="btn" type="button">START</button>
+      </div>
+    </div>
+
+    <div id="endScreen" class="overlay hidden">
+      <div class="panel">
+        <h2 id="endTitle">Game Over</h2>
+        <p id="endText"></p>
+        <button id="restartBtn" class="btn" type="button">PLAY AGAIN</button>
+      </div>
+    </div>
+
+    <div class="touch-controls">
+      <div class="touch-group">
+        <button id="btnLeft" class="tbtn" type="button">&#9664;</button>
+        <button id="btnRight" class="tbtn" type="button">&#9654;</button>
+      </div>
+      <div class="touch-group">
+        <button id="btnMagic" class="tbtn" type="button">&#10022;</button>
+        <button id="btnAttack" class="tbtn" type="button">&#9876;</button>
+        <button id="btnJump" class="tbtn" type="button">&#9650;</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; SB game &bull; Press Enter to start or restart</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
